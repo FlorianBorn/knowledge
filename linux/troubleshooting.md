@@ -22,5 +22,9 @@ ns1.google.com  has AAAA address 2001:4860:4802:32::a
 ns2.google.com  has AAAA address 2001:4860:4802:34::a
 ns3.google.com  has AAAA address 2001:4860:4802:36::a
 ns4.google.com  has AAAA address 2001:4860:4802:38::a
-
 ```
+
+**Fix: local error: tls: bad record MAC**  
+**Solution:** Unplug/Plug your WiFi-Stick  
+
+Source: https://stackoverflow.com/questions/8154617/how-to-troubleshoot-ssl-bad-record-mac-exception
