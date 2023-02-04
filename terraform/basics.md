@@ -17,3 +17,7 @@ If not you have to assign a provider within the ressource.
 terraform plan will throw this warning  
 `Provider "registry.terraform.io/hashicorp/aws" was implicitly required via resource "aws_instance.my_app_server", but listed in required_providers as "foo". Either the local name in required_providers must    
  match the resource name, or the "foo" provider must be assigned within the resource block."`
+
+**Where to declare (input) variables?**
+Variables can be declared anywhere in ones configuration but it's recommended to declare variables in a file called variables.tf  
+https://developer.hashicorp.com/terraform/tutorials/configuration-language/variables  
