@@ -21,3 +21,11 @@ terraform plan will throw this warning
 **Where to declare (input) variables?**
 Variables can be declared anywhere in ones configuration but it's recommended to declare variables in a file called variables.tf  
 https://developer.hashicorp.com/terraform/tutorials/configuration-language/variables  
+
+**Whats the difference between NACLs (Network Access Lists) and Security Groups?**  
+NACLs apply to Networks (Subnets), while Security Groups apply to EC2 instances AND AWS Services.  
+State
+* NACLs are stateless, which if you allow outgoing traffic from a network, you also have to allow the incoming traffic returning from these outgoing requests  
+* Security Groups are stateful, if there is an outgoing rule defined, the returning traffic will be allowed as well (without an explicitly defined rule)  
+
+See: https://gocloudtech.medium.com/aws-security-groups-vs-nacl-whats-the-difference-a38b9eb6796b  
