@@ -9,3 +9,14 @@ openssl s_client -connect  my.example.net:443
 openssl s_client -showcerts -connect my.example:443 </dev/null 2>/dev/null|openssl x509 -outform PEM > mycertfile.pem
 ## show the certificates in human readable way
 openssl x509 -in mycertfile.pem -text
+
+
+# show the ssl/tls handshake with openssl
+openssl s_client -state -nbio  -connect my.example.net:443
+
+
+# Troubleshooting
+## curl: (1) Received HTTP/0.9 when not allowed
+Führe curl mit http0.9 handling aus
+curl -vvv  my.example.net:443 --http0.9 --output -
+https://stackoverflow.com/questions/59048926/php-curl-received-http-0-9-when-not-allowed
